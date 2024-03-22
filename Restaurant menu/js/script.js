@@ -1,9 +1,17 @@
 let menu = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
+let theme = document.querySelector('.switch');
+let root = document.querySelector(':root');
 
 menu.onclick = () => {
   menu.classList.toggle('fa-times');
   navbar.classList.toggle('active');
+};
+
+theme.onclick = () => {
+  theme.classList.toggle('active');
+  document.body.classList.toggle('active');
+  root.classList.toggle('dark');
 };
 
 window.onscroll = () => {
